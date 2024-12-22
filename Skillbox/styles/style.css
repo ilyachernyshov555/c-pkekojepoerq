@@ -1,0 +1,162 @@
+h1 {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("../fonts/shrift.ttf");
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.main__text {
+  width: 467px;
+
+  font-family: "Graphik", Tahoma, sans-serif;
+  font-size: clamp(0.5rem, 0.4539rem + 1.3158vw, 2rem);
+  line-height: 36px;
+}
+
+.main__images {
+  width: 568px;
+  height: 351px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.span {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.span:hover {
+  text-decoration: none;
+}
+
+.card {
+  width: 274px;
+  height: 351px;
+  border-radius: 20px;
+  background: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image {
+  border-radius: 100px;
+  width: 180px;
+  height: 180px;
+  margin: none;
+}
+
+.card__title {
+  font-family: "Graphik", Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.card__text {
+  font-family: "Graphik", Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 100;
+  text-align: center;
+  color: #66666666;
+}
+
+.images__text {
+  font-family: "Graphik";
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 100%;
+    height: 272px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    flex-direction: column;
+  }
+  .main__images {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .main {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main__text {
+    width: 100%;
+    margin: auto;
+  }
+
+  .main__images {
+    margin: auto;
+    width: 100%;
+  }
+
+  .card:first-child {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 446px) {
+  .card {
+    height: 292px;
+  }
+  .card__text {
+    width: 246px;
+  }
+  .main__text {
+    line-height: 20px;
+  }
+
+  @media (max-width: 244px) {
+    .card {
+      margin: auto;
+    }
+    .main {
+      padding: none;
+    }
+    .main__images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .main__text {
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    .card__title {
+      width: none;
+      height: none;
+      margin: auto;
+    }
+
+    .image {
+      width: 70px;
+      height: 70px;
+      margin: none;
+    }
+  }
+
+  @media (max-width: 182px) {
+    .main {
+      margin: none;
+    }
+    .card {
+      justify-content: center;
+    }
+  }
+}
